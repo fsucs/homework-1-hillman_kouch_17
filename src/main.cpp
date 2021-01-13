@@ -4,6 +4,8 @@
 
 @Kylee Hillman and Kennyth Kouch
 
+This project takes user input in the form of of a string. The string is passed
+to a function that finds how many time the most common letter occurs. 
 */
 
 #include <iostream>
