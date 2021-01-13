@@ -27,6 +27,15 @@ Or else you loose points.
 #include <string>
 
 int get_max_count(std::string sinput){
+	string letters[26]{0};
+	int maxcount
+	for (int i = 0; i < sinput.length(); i++) {
+		for (int j = 0; j < len; j++) {
+			if (letters[i] != sinput.at(j)) {
+				letters[i] = sinput.at(j)
+			}
+			else if (letters[i] == sinput.at(j)) {
+				
     return 0;
 }
 
