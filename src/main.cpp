@@ -9,7 +9,7 @@ to a function that finds how many time the most common letter occurs.
 */
 
 #include <iostream>
-#include <example.hpp>
+#include "../include/example.hpp"
 #include <assert.h>
 #include <string>
 
