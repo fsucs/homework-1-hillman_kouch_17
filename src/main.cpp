@@ -12,9 +12,23 @@ to a function that finds how many time the most common letter occurs.
 #include "../include/example.hpp"
 #include <assert.h>
 #include <string>
+#include <algorithm>
 
 int get_max_count(std::string sinput){
-    return 0;
+	char letters [sinput.length()] {0};
+	int maxcount [sinput.length()] {0};
+	for (unsigned int i = 0; i < sinput.length(); i++) {
+		for (unsigned int j = 0; j < sinput.length(); j++) {
+			if (letters[i] != sinput.at(j)) {
+				letters[i] = sinput.at(j);
+			}
+			else if (letters[i] == sinput.at(j)) {
+				maxcount[j]++;
+			}
+		}
+	}
+	int num = *std::max_element(maxcount, maxcount+sinput.length());
+    return num;
 }
 
 int main(int argc, char *argv[]){
