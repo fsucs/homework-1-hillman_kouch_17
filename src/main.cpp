@@ -2,7 +2,7 @@
 /**
 @mainpage COP 3330 Project 1
 
-@author Me and Myself
+@Kylee Hillman and Kennyth Kouch
 
 */
 
