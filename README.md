@@ -1,8 +1,8 @@
 Getting Started
 ===============
 
-Please update this README file to showcase about this project. There is no specific format for README file, but you should tell about your overall project works and how can anyone will run your code.
-
+This project take user input and returns an integer that represents how many times
+the most common letter in the given string occurs.
 
 Installation and RUN
 
