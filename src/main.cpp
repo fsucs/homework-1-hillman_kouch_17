@@ -6,28 +6,28 @@
 
 This project takes user input in the form of of a string. The string is passed
 to a function that finds how many time the most common letter occurs. 
+
+Compares every letter in the input string to every letter in the alphabet
+Creates an array that tells the frequency of each letter in the inputted string
 */
 
 #include <iostream>
 #include "../include/example.hpp"
 #include <assert.h>
 #include <string>
-#include <algorithm>
+#include <algorithm> //*std::max_element
 
 int get_max_count(std::string sinput){
-       	std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
-	/*int maxcount [sinput.length()] {0};
-        
-        int counter [26] = {};   
-	for (unsigned int i = 0; i < sinput.length(); i++) {
-		for (unsigned int j = 0; j < alphabet(); j++) {
-			if (sinput.at(i) == alphabet.at(j)) {
-			   counter[j]++;
-                        }
+    std::string alphabet = "abcdefghijklmnopqrstuvwxyz"; 			//String with the alphabet.
+    int counter [26] = {};   										//Holds frequency of each letter.
+	for (unsigned int i = 0; i < sinput.length(); i++) {			//Loops through each character of input string.
+		for (unsigned int j = 0; j < alphabet.length(); j++) {  	//Loops through each letter of the alphabet string.
+			if (sinput.at(i) == alphabet.at(j)) {					//Compares input string to alphabet string.
+			   counter[j]++;										//If they match, then the counter is incremented by 1.
+            }
 		}
 	}
-        */
-	int num = *std::max_element(counter, counter+sinput.length());
+	int num = *std::max_element(counter, counter+sinput.length()); //Pulls the max frequency from counter array.
     return num;
 }
 
@@ -44,5 +44,3 @@ int main(int argc, char *argv[]){
         cout << get_max_count(line) << endl;
     }
 
-	return 0;
-}
