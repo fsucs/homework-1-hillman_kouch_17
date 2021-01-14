@@ -18,12 +18,14 @@ Creates an array that tells the frequency of each letter in the inputted string
 #include <algorithm> //*std::max_element
 
 int get_max_count(std::string sinput){
-    std::string alphabet = "abcdefghijklmnopqrstuvwxyz"; 			//String with the alphabet.
-    int counter [26] = {};   										//Holds frequency of each letter.
-	for (unsigned int i = 0; i < sinput.length(); i++) {			//Loops through each character of input string.
-		for (unsigned int j = 0; j < alphabet.length(); j++) {  	//Loops through each letter of the alphabet string.
-			if (sinput.at(i) == alphabet.at(j)) {					//Compares input string to alphabet string.
-			   counter[j]++;										//If they match, then the counter is incremented by 1.
+    int counter [26] = {};  
+    std:: string input_copy = sinput;
+           										//Holds frequency of each letter.
+	for (unsigned int i = 0; i < input_copy.length(); i++) {			//Loops through each character of input string.
+		for (unsigned int j = 0; j < sinput.length(); j++) {  	//Loops through each letter of the alphabet string.
+			if (input_copy[i] == sinput[j]) {					//Compares input string to alphabet string.
+			   counter[j]++;
+                           //std::cout << counter[j];										//If they match, then the counter is incremented by 1.
             }
 		}
 	}
@@ -43,4 +45,4 @@ int main(int argc, char *argv[]){
         getline(cin, line);
         cout << get_max_count(line) << endl;
     }
-
+}
