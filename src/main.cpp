@@ -15,19 +15,19 @@ to a function that finds how many time the most common letter occurs.
 #include <algorithm>
 
 int get_max_count(std::string sinput){
-	char letters [sinput.length()] {0};
-	int maxcount [sinput.length()] {0};
+       	std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
+	/*int maxcount [sinput.length()] {0};
+        
+        int counter [26] = {};   
 	for (unsigned int i = 0; i < sinput.length(); i++) {
-		for (unsigned int j = 0; j < sinput.length(); j++) {
-			if (letters[i] != sinput.at(j)) {
-				letters[i] = sinput.at(j);
-			}
-			else if (letters[i] == sinput.at(j)) {
-				maxcount[j]++;
-			}
+		for (unsigned int j = 0; j < alphabet(); j++) {
+			if (sinput.at(i) == alphabet.at(j)) {
+			   counter[j]++;
+                        }
 		}
 	}
-	int num = *std::max_element(maxcount, maxcount+sinput.length());
+        */
+	int num = *std::max_element(counter, counter+sinput.length());
     return num;
 }
 
