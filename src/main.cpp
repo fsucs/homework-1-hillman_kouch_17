@@ -7,8 +7,12 @@
 This project takes user input in the form of of a string. The string is passed
 to a function that finds how many time the most common letter occurs. 
 
-Compares every letter in the input string to every letter in the alphabet
+This program makes a copy of the unpit string and uses that as a list of 
+characters to compare to the input string. This counts how many characters
+there are. 
 Creates an array that tells the frequency of each letter in the inputted string
+
+
 */
 
 #include <iostream>
@@ -18,14 +22,13 @@ Creates an array that tells the frequency of each letter in the inputted string
 #include <algorithm> //*std::max_element
 
 int get_max_count(std::string sinput){
-    int counter [26] = {};  
-    std:: string input_copy = sinput;
-           										//Holds frequency of each letter.
-	for (unsigned int i = 0; i < input_copy.length(); i++) {			//Loops through each character of input string.
-		for (unsigned int j = 0; j < sinput.length(); j++) {  	//Loops through each letter of the alphabet string.
-			if (input_copy[i] == sinput[j]) {					//Compares input string to alphabet string.
+    int counter [sinput.length()] = {};                                     //array with frequcy counts for each letter  
+    std:: string input_copy = sinput;                                       //making a copy of the input string
+
+	for (unsigned int i = 0; i < input_copy.length(); i++) {	//Loops through each character of copied string.
+		for (unsigned int j = 0; j < sinput.length(); j++) {  	//Loops through each letter of the input string string.
+			if (input_copy[i] == sinput[j]) {		//Compares input string to copied string.
 			   counter[j]++;
-                           //std::cout << counter[j];										//If they match, then the counter is incremented by 1.
             }
 		}
 	}
